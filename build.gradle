@@ -10,10 +10,9 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/redis.clients/jedis
     implementation 'redis.clients:jedis:5.0.1'
 
-
+    implementation "io.reactivex.rxjava3:rxjava:3.1.8"
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
