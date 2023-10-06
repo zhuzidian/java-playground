@@ -18,7 +18,7 @@ class ReentrantLockThread implements Runnable{
         try {
             lock.lock();
             for (int i = 0; i < 3; i++) {
-                System.out.println(Thread.currentThread().getName() + "输出了：  " + i);
+                System.out.println(Thread.currentThread().getName() + "こんにちは" + i);
                 try {
                     Thread.sleep(new Random().nextInt(1000));
                 } catch (Exception e) {
