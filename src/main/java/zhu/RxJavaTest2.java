@@ -47,6 +47,12 @@ public class RxJavaTest2 {
             }
         });
 
+        jedisPubSubObservable.subscribe(
+                (jedisPubSub) -> {},
+                (t) -> {},
+                () -> {}
+        );
+
         jedisPubSubObservable.subscribeWith(new Observer<JedisPubSub>() {
             private Disposable d;
             @Override
@@ -57,7 +63,6 @@ public class RxJavaTest2 {
 
             @Override
             public void onNext(@NonNull JedisPubSub jedisPubSub) {
-
             }
 
             @Override
