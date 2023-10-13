@@ -1,4 +1,4 @@
-package zhu;
+package zhu.rxjava;
 
 import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.schedulers.Schedulers;

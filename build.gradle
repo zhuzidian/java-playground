@@ -5,13 +5,6 @@ plugins {
 group = 'zhu'
 version = '1.0-SNAPSHOT'
 
-// compileJavaタスクのエンコーディング
-compileJava.options.encoding = 'UTF-8'
-// compileTestJavaタスクのエンコーディング
-compileTestJava.options.encoding = 'UTF-8'
-// javadocタスクのエンコーディング
-javadoc.options.encoding = 'UTF-8'
-
 repositories {
     mavenCentral()
 }

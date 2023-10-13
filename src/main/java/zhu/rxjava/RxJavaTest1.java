@@ -1,4 +1,4 @@
-package zhu;
+package zhu.rxjava;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPubSub;
