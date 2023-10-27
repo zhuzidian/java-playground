@@ -1,4 +1,4 @@
-package zhu.rxjava;
+package zhu.old;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
@@ -19,33 +19,27 @@ public class RxJavaTest6 {
     public static void main(String[] args) throws Exception {
         System.out.println("main start");
 
-        Observable<Integer> observable = Observable.<Integer>create(emitter -> {
+        Observable.<Integer>create(emitter -> {
             new Thread(() -> {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
                 for (int i = 1; i <= 5; i++) {
-                    emitter.onNext(i);
                     try {
                         Thread.sleep(100);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
+                    emitter.onNext(i);
                 }
 
                 System.out.println("emitter.onComplete");
                 emitter.onComplete();
-
             }).start();
 
+            System.out.println(11);
             emitter.setCancellable(() -> {
                 System.out.println("emitter.setCancellable");
             });
-        });
-
-        observable.subscribe(i -> {
+            System.out.println(22);
+        }).subscribe(i -> {
             System.out.println(i);
         });
 
